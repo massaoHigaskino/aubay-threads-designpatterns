@@ -5,6 +5,10 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Scanner;
 
+
+/*
+    Objetivo: Reescrever o código para que o tratamento de cada requisição seja feito por threads
+*/
 public class ExampleServer {
 
     public static void main(String[] args) throws IOException {

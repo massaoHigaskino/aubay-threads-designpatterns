@@ -7,6 +7,5 @@ package threads.threadsandrunnable;
 
 public class HandsOnThreadsRunnable {
     public static void main(String[] args) {
-        
     }
 }

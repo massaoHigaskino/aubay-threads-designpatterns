@@ -6,5 +6,7 @@
 
 3. [Concorrência e Paralelismo](https://existentialtype.wordpress.com/2011/03/17/parallelism-is-not-concurrency/)
 
+4. [Conceitos de Linguagens de Programação - 9.ed. Robert W. Sebesta, capítulo 19](https://www.amazon.com.br/Livros-Robert-W-Sebesta/s?rh=n%3A6740748011%2Cp_27%3ARobert+W.+Sebesta)
+
 ## Design Patterns
 1. Referências
