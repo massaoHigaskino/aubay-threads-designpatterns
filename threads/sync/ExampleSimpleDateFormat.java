@@ -22,7 +22,7 @@ public class ExampleSimpleDateFormat {
             }
         };
 
-        for(int i = 0; i < 5; i++) {
+        for(int i = 0; i < 2; i++) {
             new Thread(tarefa).start();
         }
 

@@ -8,5 +8,9 @@
 
 4. [Conceitos de Linguagens de Programação - 9.ed. Robert W. Sebesta, capítulo 19](https://www.amazon.com.br/Livros-Robert-W-Sebesta/s?rh=n%3A6740748011%2Cp_27%3ARobert+W.+Sebesta)
 
+5. [Refcard - DZone](https://dzone.com/refcardz/core-java-concurrency?chapter=1)
+
+6. [Multithreading - Jenkov](http://tutorials.jenkov.com/java-concurrency/index.html)
+
 ## Design Patterns
 1. Referências

@@ -2,6 +2,7 @@ package threads.sync;
 
 
 /*
+    synchronized, volatile, atomicity, collections, immutable
 */
 
 public class HandsOnSync {
