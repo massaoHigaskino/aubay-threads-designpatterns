@@ -8,7 +8,7 @@ package threads.errors;
 public class ExampleErrorsSendMail {
     public static void main(String[] args) {
 
-        TaskSendMail task = new TaskSendMail("clark.kaant@gmail.com", "tem certeza kant?");
+        TaskSendMail task = new TaskSendMail("clark.kaant@gmail.com", "tem certeza kaant?");
 
         Thread t1 = new Thread(task);
         
