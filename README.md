@@ -12,5 +12,7 @@
 
 6. [Multithreading - Jenkov](http://tutorials.jenkov.com/java-concurrency/index.html)
 
+7. [Java Efetivo - 3º.ed. Joshua Bloch](https://www.amazon.com.br/Java-Efetivo-Melhores-Pr%C3%A1ticas-Plataforma/dp/8550804622)
+
 ## Design Patterns
 1. Referências
