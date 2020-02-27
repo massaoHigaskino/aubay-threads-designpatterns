@@ -4,7 +4,7 @@ package threads.sync;
     Objetivo: trabalhar com imutabilidade
 */
 
-public class ExampleImmutable {
+public class ExemploImutabilidade {
 
     public static void main(String[] args) {
         ImmutableValue iv = new ImmutableValue(1);

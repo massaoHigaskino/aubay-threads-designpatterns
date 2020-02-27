@@ -4,9 +4,9 @@ import java.io.IOException;
 
 
 /*
-    Objetivo: Crie uma thread usando a sintaxe de lambda expressions
+    Objetivo: Crie uma thread usando a sintaxe herança, uma thread que conte até 100
 */
-public class ExampleJavaLambda {
+public class ExemploJavaThread {
 
     public static void main(String[] args) throws IOException {
         

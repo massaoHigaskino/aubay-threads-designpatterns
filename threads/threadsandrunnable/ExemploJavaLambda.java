@@ -4,9 +4,9 @@ import java.io.IOException;
 
 
 /*
-    Objetivo: Crie uma thread usando a runnable/com classe anônima também, que imprima os números pares até 100
+    Objetivo: Crie uma thread usando a sintaxe de lambda expressions
 */
-public class ExampleJavaRunnable {
+public class ExemploJavaLambda {
 
     public static void main(String[] args) throws IOException {
         

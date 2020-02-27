@@ -1,6 +1,6 @@
 package threads.sync;
 
-public class ExampleSync1 {
+public class ExemploSync1 {
 
     public static void main(String[] args) throws InterruptedException {
         Listinha lista = new Listinha();

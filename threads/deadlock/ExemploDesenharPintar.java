@@ -4,7 +4,7 @@ package threads.deadlock;
     
 */
 
-public class ExampleDesenharPintar {
+public class ExemploDesenharPintar {
 
     public static Object desenho = new Object();
     public static Object pintura = new Object();

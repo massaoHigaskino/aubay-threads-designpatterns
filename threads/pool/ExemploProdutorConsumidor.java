@@ -6,7 +6,7 @@ import java.util.List;
 /*
 */
 
-public class ExampleProdutorConsumidor {
+public class ExemploProdutorConsumidor {
     public static void main(String[] args) {
         List<Integer> queue = new LinkedList<>();
 

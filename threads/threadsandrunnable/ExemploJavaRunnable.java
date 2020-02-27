@@ -4,9 +4,9 @@ import java.io.IOException;
 
 
 /*
-    Objetivo: Crie uma thread usando a sintaxe herança, uma thread que conte até 100
+    Objetivo: Crie uma thread usando a runnable/com classe anônima também, que imprima os números pares até 100
 */
-public class ExampleJavaThread {
+public class ExemploJavaRunnable {
 
     public static void main(String[] args) throws IOException {
         

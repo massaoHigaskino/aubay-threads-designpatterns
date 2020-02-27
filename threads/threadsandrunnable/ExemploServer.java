@@ -9,7 +9,7 @@ import java.util.Scanner;
 /*
     Objetivo: Reescrever o código para que o tratamento de cada requisição seja feito por threads
 */
-public class ExampleServer {
+public class ExemploServer {
 
     public static void main(String[] args) throws IOException {
         ServerSocket servidor = new ServerSocket(12345);

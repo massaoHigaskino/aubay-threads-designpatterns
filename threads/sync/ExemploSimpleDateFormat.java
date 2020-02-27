@@ -8,7 +8,7 @@ import java.util.Date;
     Objetivo: Há algum problema?
 */
 
-public class ExampleSimpleDateFormat {
+public class ExemploSimpleDateFormat {
 
     private static SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
 

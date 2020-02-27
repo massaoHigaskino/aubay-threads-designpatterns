@@ -3,7 +3,7 @@ package threads.join;
 /*
 */
 
-public class ExampleWaitNotify {
+public class ExemploWaitNotify {
     public static void main(String[] args) {
 
         Somador somador = new Somador();

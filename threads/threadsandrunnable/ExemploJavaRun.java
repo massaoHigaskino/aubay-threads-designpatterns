@@ -3,7 +3,7 @@ package threads.threadsandrunnable;
 /*
     Objetivo: há algo errado no reino da babilônia
 */
-public class ExampleJavaRun {
+public class ExemploJavaRun {
 
     public static void main(String[] args) {
         Runnable task = () -> {
