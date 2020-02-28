@@ -7,9 +7,11 @@ import java.util.Scanner;
 
 
 /*
-    Objetivo: Reescreva o código para que o tratamento de cada requisição seja feito por threads
+    Objetivo: Reescreva o código para que o tratamento de cada requisição seja feito por threads e contar o número de requisições
 */
-public class ExemploServer {
+public class ExemploServerContador {
+
+    private static long contador = 0;
 
     public static void main(String[] args) throws IOException {
         ServerSocket servidor = new ServerSocket(12345);
@@ -18,6 +20,8 @@ public class ExemploServer {
             Scanner s = new Scanner(cliente.getInputStream());
             while (s.hasNextLine()) {
                 System.out.println(s.nextLine());
+                contador++;
+                System.out.println("Já foram "+contador+" requisições");
             }
             s.close();
         }

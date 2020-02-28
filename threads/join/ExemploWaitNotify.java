@@ -1,6 +1,7 @@
 package threads.join;
 
 /*
+    Objetivo: 
 */
 
 public class ExemploWaitNotify {

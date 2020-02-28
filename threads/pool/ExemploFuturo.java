@@ -3,7 +3,7 @@ package threads.pool;
 import java.util.concurrent.ExecutionException;
 
 /*
-    Uma somadora, agora, pense no futuro, obtenha a resposta assincronamente
+    Reescreva o código que assincronamente, obtenha-se o retorno
 */
 
 public class ExemploFuturo {

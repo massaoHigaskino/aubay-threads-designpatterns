@@ -5,7 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /*
-    Objetivo: Há algum problema?
+    Objetivo: Reescreva o código para que fique seguro.
 */
 
 public class ExemploSimpleDateFormat {

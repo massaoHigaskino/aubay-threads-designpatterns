@@ -1,5 +1,9 @@
 package threads.sync;
 
+/*
+    Objetivo: A implementação não está segura. Reescreva para que fique thread-safe
+*/
+
 public class ExemploSync1 {
 
     public static void main(String[] args) throws InterruptedException {

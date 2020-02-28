@@ -1,7 +1,7 @@
 package threads.deadlock;
 
 /*
-    
+    Reescreva a solução para evitar problemas.
 */
 
 public class ExemploDesenharPintar {

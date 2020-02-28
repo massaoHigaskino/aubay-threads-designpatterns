@@ -4,7 +4,7 @@ import java.io.IOException;
 
 
 /*
-    Objetivo: Crie uma thread usando a sintaxe herança, uma thread que conte até 100
+    Objetivo: Crie uma thread usando a sintaxe de herança, uma thread que conte até 100
 */
 public class ExemploJavaThread {
 

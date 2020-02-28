@@ -2,7 +2,7 @@ package threads.errors;
 
 
 /*
-    handle errors
+    Reesceva o código para manipular erros.
 */
 
 public class ExampleErrorsSendMail {

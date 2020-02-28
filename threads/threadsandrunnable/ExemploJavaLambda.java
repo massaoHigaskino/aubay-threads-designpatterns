@@ -4,7 +4,7 @@ import java.io.IOException;
 
 
 /*
-    Objetivo: Crie uma thread usando a sintaxe de lambda expressions
+    Objetivo: Crie uma thread usando a sintaxe de lambda expression
 */
 public class ExemploJavaLambda {
 

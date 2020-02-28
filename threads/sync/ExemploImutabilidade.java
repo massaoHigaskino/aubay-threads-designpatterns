@@ -1,7 +1,7 @@
 package threads.sync;
 
 /*
-    Objetivo: trabalhar com imutabilidade
+    Objetivo: Reescreva o código para que fique seguro.
 */
 
 public class ExemploImutabilidade {

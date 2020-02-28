@@ -1,7 +1,7 @@
 package threads.threadsandrunnable;
 
 /*
-    Objetivo: há algo errado no reino da babilônia
+    Objetivo: Identifique a inconsitência e apresente uma possível solução
 */
 public class ExemploJavaRun {
 

@@ -4,6 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /*
+    Objetiivo: Reescreva para que o código fique thread-safe
 */
 
 public class ExemploProdutorConsumidor {
