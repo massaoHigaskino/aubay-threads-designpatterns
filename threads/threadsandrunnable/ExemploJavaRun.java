@@ -12,7 +12,8 @@ public class ExemploJavaRun {
 
         Thread t1 = new Thread(task);
         
-        t1.run();
+        //t1.run(); // Run não inicia nova Thread, apenas chama o método run();
+        t1.start();
 
     }
 

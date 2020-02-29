@@ -9,7 +9,13 @@ import java.io.IOException;
 public class ExemploJavaRunnable {
 
     public static void main(String[] args) throws IOException {
+        new Thread(new Runnable(){
         
+            @Override
+            public void run() {
+                System.out.println(ExemploJavaRunnable.class.getName() + ": classe anônima.");
+            }
+        }).start();
     }
 
 }
