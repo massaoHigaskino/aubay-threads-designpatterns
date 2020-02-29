@@ -3,6 +3,9 @@ package threads.threadsandrunnable;
 import java.io.IOException;
 import java.util.concurrent.atomic.AtomicBoolean;
 
+// Parar thread: Thread.interrupt();
+// volatile: em memória
+
 /*
     Objetivo: Crie uma thread e pare ela
 */
