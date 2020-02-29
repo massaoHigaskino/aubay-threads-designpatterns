@@ -13,7 +13,6 @@ public class ExemploJavaStop {
 
         System.out.println("Está rodando: " + kill.isRunning());
         System.out.println("Está Morta: " + kill.isStopped());
-        kill.stop();
         System.out.println("Está rodando: " + kill.isRunning());
         System.out.println("Está Morta: " + kill.isStopped());
     }
