@@ -12,7 +12,11 @@ public class ExemploWaitNotify {
 
         synchronized (somador) {
             System.out.println("Aguardando o b completar...");
+            try {
+                somador.join(); // espera o somador terminar execução
+            } catch (InterruptedException e) {
 
+            }
             System.out.println("Total é igual a: " + somador.total);
         }
 
