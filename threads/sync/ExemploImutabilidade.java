@@ -34,7 +34,7 @@ class TaskImmutable implements Runnable {
     @Override
     public void run() {
         for (int i = 0; i < 5; i++) {
-            immutableValue.add(i);
+            immutableValue = immutableValue.add(i);
         }
         System.out.println(immutableValue.getValue());
     }
@@ -43,7 +43,7 @@ class TaskImmutable implements Runnable {
 
 class ImmutableValue {
 
-    private int value = 0;
+    private int value = 0; // TODO mudar para AtomicInteger
 
     public ImmutableValue(int value) {
         this.value = value;
@@ -53,8 +53,8 @@ class ImmutableValue {
         return this.value;
     }
 
-    public void add(int valueToAdd) {
-        value += valueToAdd;
+    public ImmutableValue add(int valueToAdd) {
+        return new ImmutableValue(value + valueToAdd);
     }
 
 }

@@ -10,9 +10,9 @@ import java.util.concurrent.TimeUnit;
 
 public class ExemploSomaProblematica {
 
-    private static boolean init;
+    private static boolean init; // TODO mudar para AtomicBoolean
 
-    public static void iniciar() {
+    public static synchronized void iniciar() {
         if (!init) {
             System.out.println("Inicializando");
             init = true;
@@ -28,3 +28,4 @@ public class ExemploSomaProblematica {
         es.shutdown();
         es.awaitTermination(10, TimeUnit.MINUTES);
     }
+}
