@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8dc56fb5-4f5d-4e89-9ea4-7ac5a56abe5f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../deadlock/ExemploDesenharPintar.java" beforeDir="false" afterPath="$PROJECT_DIR$/../deadlock/threads/deadlock/ExemploDesenharPintar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../errors/ExampleErrorsSendMail.java" beforeDir="false" afterPath="$PROJECT_DIR$/../errors/threads/errors/ExampleErrorsSendMail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../join/ExemploWaitNotify.java" beforeDir="false" afterPath="$PROJECT_DIR$/../join/ExemploWaitNotify.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../join/HandsOnJoin.java" beforeDir="false" afterPath="$PROJECT_DIR$/../join/HandsOnJoin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../join/OrganizadorThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../join/OrganizadorThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExemploFuturo.java" beforeDir="false" afterPath="$PROJECT_DIR$/threads/pool/ExemploFuturo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../priority/ExemploPrioridade.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../singleton/src/main/java/com/example/singleton/ExemploSingleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/../singleton/src/main/java/com/example/singleton/ExemploSingleton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sync/ExemploImutabilidade.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sync/threads/sync/ExemploImutabilidade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sync/ExemploSimpleDateFormat.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sync/threads/sync/ExemploSimpleDateFormat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sync/ExemploSimpleDateFormatJava8.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sync/threads/sync/ExemploSimpleDateFormatJava8.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sync/ExemploSomaProblematica.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sync/threads/sync/ExemploSomaProblematica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sync/ExemploSync1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sync/threads/sync/ExemploSync1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sync/HandsOnSync.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sync/HandsOnSync.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../threadsandrunnable/ExemploJavaLambda.java" beforeDir="false" afterPath="$PROJECT_DIR$/../threadsandrunnable/ExemploJavaLambda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../threadsandrunnable/ExemploJavaRun.java" beforeDir="false" afterPath="$PROJECT_DIR$/../threadsandrunnable/ExemploJavaRun.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../threadsandrunnable/ExemploJavaRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../threadsandrunnable/ExemploJavaRunnable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../threadsandrunnable/ExemploJavaStop.java" beforeDir="false" afterPath="$PROJECT_DIR$/../threadsandrunnable/ExemploJavaStop.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1YUTbvjqN3vpj1BW1QaxtAZrIir" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RunManager">
+    <configuration name="ExemploFuturo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="threads.pool.ExemploFuturo" />
+      <module name="pool" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="threads.pool.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ExemploFuturo" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8dc56fb5-4f5d-4e89-9ea4-7ac5a56abe5f" name="Default Changelist" comment="" />
+      <created>1582996247581</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582996247581</updated>
+      <workItem from="1582996248701" duration="1146000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2155" y="60" width="800" height="720" key="#Intentions" timestamp="1582996624096">
+      <screen x="1920" y="0" width="1280" height="800" />
+    </state>
+    <state x="2155" y="60" width="800" height="720" key="#Intentions/0.0.1920.1040/1920.0.1280.800@1920.0.1280.800" timestamp="1582996624096" />
+    <state x="2368" y="108" width="374" height="576" key="#com.intellij.ide.util.MemberChooser" timestamp="1582996506988">
+      <screen x="1920" y="0" width="1280" height="800" />
+    </state>
+    <state x="2368" y="108" width="374" height="576" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1280.800@1920.0.1280.800" timestamp="1582996506988" />
+    <state width="1238" height="197" key="GridCell.Tab.0.bottom" timestamp="1582997394119">
+      <screen x="1920" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="197" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1280.800@1920.0.1280.800" timestamp="1582997394119" />
+    <state width="1238" height="197" key="GridCell.Tab.0.center" timestamp="1582997394118">
+      <screen x="1920" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="197" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1280.800@1920.0.1280.800" timestamp="1582997394118" />
+    <state width="1238" height="197" key="GridCell.Tab.0.left" timestamp="1582997394118">
+      <screen x="1920" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="197" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1280.800@1920.0.1280.800" timestamp="1582997394118" />
+    <state width="1238" height="197" key="GridCell.Tab.0.right" timestamp="1582997394119">
+      <screen x="1920" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="197" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1280.800@1920.0.1280.800" timestamp="1582997394119" />
+  </component>
+</project>
