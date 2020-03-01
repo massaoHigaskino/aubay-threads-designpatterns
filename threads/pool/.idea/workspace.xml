@@ -19,26 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8dc56fb5-4f5d-4e89-9ea4-7ac5a56abe5f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../deadlock/ExemploDesenharPintar.java" beforeDir="false" afterPath="$PROJECT_DIR$/../deadlock/threads/deadlock/ExemploDesenharPintar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../errors/ExampleErrorsSendMail.java" beforeDir="false" afterPath="$PROJECT_DIR$/../errors/threads/errors/ExampleErrorsSendMail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../join/ExemploWaitNotify.java" beforeDir="false" afterPath="$PROJECT_DIR$/../join/ExemploWaitNotify.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../join/HandsOnJoin.java" beforeDir="false" afterPath="$PROJECT_DIR$/../join/HandsOnJoin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../join/OrganizadorThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../join/OrganizadorThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExemploFuturo.java" beforeDir="false" afterPath="$PROJECT_DIR$/threads/pool/ExemploFuturo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../priority/ExemploPrioridade.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../singleton/src/main/java/com/example/singleton/ExemploSingleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/../singleton/src/main/java/com/example/singleton/ExemploSingleton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sync/ExemploImutabilidade.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sync/threads/sync/ExemploImutabilidade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sync/ExemploSimpleDateFormat.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sync/threads/sync/ExemploSimpleDateFormat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sync/ExemploSimpleDateFormatJava8.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sync/threads/sync/ExemploSimpleDateFormatJava8.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sync/ExemploSomaProblematica.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sync/threads/sync/ExemploSomaProblematica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sync/ExemploSync1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sync/threads/sync/ExemploSync1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sync/HandsOnSync.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sync/HandsOnSync.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../threadsandrunnable/ExemploJavaLambda.java" beforeDir="false" afterPath="$PROJECT_DIR$/../threadsandrunnable/ExemploJavaLambda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../threadsandrunnable/ExemploJavaRun.java" beforeDir="false" afterPath="$PROJECT_DIR$/../threadsandrunnable/ExemploJavaRun.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../threadsandrunnable/ExemploJavaRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../threadsandrunnable/ExemploJavaRunnable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../threadsandrunnable/ExemploJavaStop.java" beforeDir="false" afterPath="$PROJECT_DIR$/../threadsandrunnable/ExemploJavaStop.java" afterDir="false" />
-    </list>
+    <list default="true" id="8dc56fb5-4f5d-4e89-9ea4-7ac5a56abe5f" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -90,6 +71,7 @@
       <option name="presentableId" value="Default" />
       <updated>1582996247581</updated>
       <workItem from="1582996248701" duration="1146000" />
+      <workItem from="1583072743213" duration="86000" />
     </task>
     <servers />
   </component>
