@@ -22,7 +22,7 @@ public class ExemploSimpleDateFormat {
             }
         };
 
-        for(int i = 0; i < 2; i++) {
+        for(int i = 0; i < 20; i++) {
             new Thread(tarefa).start();
         }
 
@@ -31,7 +31,7 @@ public class ExemploSimpleDateFormat {
 }
 
 class DateUtils {
-    public static void parseDate(String dateStr, SimpleDateFormat sdf) {
+    public static synchronized void parseDate(String dateStr, SimpleDateFormat sdf) {
         try {
             Date date = sdf.parse(dateStr);
             System.out.println("Date Parseada " + date);

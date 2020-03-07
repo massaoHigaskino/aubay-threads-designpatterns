@@ -46,7 +46,7 @@ class Listinha {
     private String[] elements = new String[1000];
     private int index = 0;
 
-    public void add(String elemento) {
+    public synchronized void add(String elemento) {
         this.elements[index] = elemento;
         this.index++;
     }

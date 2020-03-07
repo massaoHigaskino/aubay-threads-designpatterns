@@ -10,8 +10,15 @@ public class ExampleErrorsSendMail {
 
         TaskSendMail task = new TaskSendMail("clark.kaant@gmail.com", "tem certeza kaant?");
 
-        Thread t1 = new Thread(task);
+        Thread t1 = new Thread(task, "MyThread-1");
         
+        t1.setUncaughtExceptionHandler(new Thread.UncaughtExceptionHandler(){
+        
+            @Override
+            public void uncaughtException(Thread thread, Throwable throwable) {
+                System.out.println("Thread: " + thread.getName() + " | Error: " + throwable.getMessage());
+            }
+        });
         
         
         t1.start();

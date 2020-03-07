@@ -10,6 +10,7 @@ import java.util.Scanner;
 */
 public class ExemploServerContador {
 
+    // TODO utilizar AtomicLong
     private static long contador = 0;
 
     public static void main(String[] args) throws IOException {

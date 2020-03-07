@@ -16,9 +16,7 @@ public class ExemploDesenharPintar {
         desenhar.start();
         pintar.start();
 
-
     }
-
 
 }
 
@@ -41,11 +39,11 @@ class Desenhar extends Thread {
                 Thread.sleep(10);
             } catch (InterruptedException e) {
             }
-            System.out.println("Thread 1: Esperando para pintar...");
+        }
+        System.out.println("Thread 1: Esperando para pintar...");
 
-            synchronized (pintura) {
-                System.out.println("Thread 1: Vou pintar...");
-            }
+        synchronized (pintura) {
+            System.out.println("Thread 1: Vou pintar...");
         }
     }
 }
@@ -63,17 +61,17 @@ class Pintar extends Thread {
     @Override
     public void run() {
         synchronized (pintura) {
-            System.out.println("Thread 1: Vou pintar...");
+            System.out.println("Thread 2: Vou pintar...");
 
             try {
                 Thread.sleep(10);
             } catch (InterruptedException e) {
             }
-            System.out.println("Thread 1: Esperando para desenhar...");
+        }
+        System.out.println("Thread 2: Esperando para desenhar...");
 
-            synchronized (desenho) {
-                System.out.println("Thread 1: Vou desenhar...");
-            }
+        synchronized (desenho) {
+            System.out.println("Thread 2: Vou desenhar...");
         }
     }
 }
