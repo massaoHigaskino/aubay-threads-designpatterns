@@ -18,7 +18,10 @@ public class Ordenador {
     }
 
     public static void main(String[] args) {
-        new Ordenador().ordenar(new ArrayList(), "QuickSort");
+        Integer[] arr = {1, 3, 4, 2};
+        List<Integer> list = Arrays.asList(arr);
+
+        new Ordenador().ordenar(list, "QuickSort");
     }
 
     public void ordenar(Collection colecao, String tipoOrdenacao) {

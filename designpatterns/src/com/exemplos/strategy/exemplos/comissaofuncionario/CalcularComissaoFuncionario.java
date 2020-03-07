@@ -1,6 +1,8 @@
 package com.exemplos.strategy.exemplos.comissaofuncionario;
 
 import java.math.BigDecimal;
+import java.util.HashMap;
+import java.util.Map;
 
 /*
     Objetivo: O cálculo de comissões não está legal. Use o pattern Strategy.
@@ -18,6 +20,17 @@ public class CalcularComissaoFuncionario {
 }
 
 class Compra {
+    
+    private static final Map<String, CalculoComissao> EMPREGADO_MAP;
+    
+    static {
+        EMPREGADO_MAP = new HashMap<>(5);
+        EMPREGADO_MAP.put("Gerente", new Gerente());
+        EMPREGADO_MAP.put("Desenvolvedor", new Desenvolvedor());
+        EMPREGADO_MAP.put("Jurídico", new Juridico());
+        EMPREGADO_MAP.put("ScrumMaster", new ScrumMaster());
+        EMPREGADO_MAP.put("Tester", new Tester());
+    }
 
     private Empregado empregado;
     private BigDecimal totalCompra;
@@ -28,18 +41,7 @@ class Compra {
     }
 
     public BigDecimal calcularComissao() {
-        if(empregado.getCargo().equals("Gerente")) {
-            return totalCompra.multiply(BigDecimal.valueOf(0.3));
-        } else if(empregado.getCargo().equals("Desenvolvedor")) {
-            return totalCompra.multiply(BigDecimal.valueOf(0.9));
-        } else if(empregado.getCargo().equals("Jurídico")) {
-            return totalCompra.multiply(BigDecimal.valueOf(0.4));
-        } else if(empregado.getCargo().equals("ScrumMaster")) {
-            return totalCompra.multiply(BigDecimal.valueOf(0.1));
-        } else if(empregado.getCargo().equals("Tester")) {
-            return totalCompra.multiply(BigDecimal.valueOf(0.7));
-        }
-        return totalCompra.multiply(BigDecimal.valueOf(0.0));
+        return EMPREGADO_MAP.getOrDefault(empregado.getCargo(), new EmpregadoDefault()).calcularComissao(totalCompra);
     }
 }
 
@@ -61,5 +63,46 @@ class Empregado {
 
     public void setCargo(String cargo) {
         this.cargo = cargo;
+    }
+}
+
+interface CalculoComissao {
+    BigDecimal calcularComissao(BigDecimal totalCompra);
+}
+
+class EmpregadoDefault implements CalculoComissao {
+    @Override
+    public BigDecimal calcularComissao(BigDecimal totalCompra) {
+        return totalCompra.multiply(BigDecimal.valueOf(0.0));
+    }
+}
+class Gerente implements CalculoComissao {
+    @Override
+    public BigDecimal calcularComissao(BigDecimal totalCompra) {
+        return totalCompra.multiply(BigDecimal.valueOf(0.3));
+    }
+}
+class Desenvolvedor implements CalculoComissao {
+    @Override
+    public BigDecimal calcularComissao(BigDecimal totalCompra) {
+        return totalCompra.multiply(BigDecimal.valueOf(0.9));
+    }
+}
+class Juridico implements CalculoComissao {
+    @Override
+    public BigDecimal calcularComissao(BigDecimal totalCompra) {
+        return totalCompra.multiply(BigDecimal.valueOf(0.4));
+    }
+}
+class ScrumMaster implements CalculoComissao {
+    @Override
+    public BigDecimal calcularComissao(BigDecimal totalCompra) {
+        return totalCompra.multiply(BigDecimal.valueOf(0.1));
+    }
+}
+class Tester implements CalculoComissao {
+    @Override
+    public BigDecimal calcularComissao(BigDecimal totalCompra) {
+        return totalCompra.multiply(BigDecimal.valueOf(0.7));
     }
 }

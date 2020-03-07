@@ -10,42 +10,100 @@ import java.util.concurrent.ThreadLocalRandom;
 public class CalculadoraDeTarifa {
 
     public static void main(String[] args) {
-        Transporte transporte = new Transporte();
-        transporte.setEscolhido(new Transporte().KAPTEN);
         CalculadoraDeTarifa tarifa = new CalculadoraDeTarifa();
-        tarifa.calcularMelhorTarifa(transporte);
+        tarifa.calcularMelhorTarifa(new TransporteKapten());
     }
 
     public void calcularMelhorTarifa(Transporte transporte) {
-        double valorTransporte = 0.0;
-        if (new Transporte().BOLT.equals(transporte.getEscolhido())) {
-            valorTransporte = ThreadLocalRandom.current().nextDouble(0, 1 + 1);
-        } else if (new Transporte().CABIFY.equals(transporte.getEscolhido())) {
-            valorTransporte = ThreadLocalRandom.current().nextDouble(0, 1 + 1);
-        } else if (new Transporte().KAPTEN.equals(transporte.getEscolhido())) {
-            valorTransporte = ThreadLocalRandom.current().nextDouble(0, 1 + 1);
-        } else if (new Transporte().UBER.equals(transporte.getEscolhido())) {
-            valorTransporte = ThreadLocalRandom.current().nextDouble(0, 1 + 1);
-        }
+        double valorTransporte = transporte.getValorTransporte();
         System.out.println("O transporte é " + transporte.getEscolhido() + " com o valor de "+valorTransporte);
     }
-
-
 }
 
-class Transporte {
-    public final String UBER = "Uber";
-    public final String BOLT = "Bolt";
-    public final String KAPTEN = "Kapten";
-    public final String CABIFY = "Cabify";
+abstract class Transporte {
+    private EmpresaTransporte escolhido;
 
-    private String escolhido;
-
-    public String getEscolhido() {
+    public EmpresaTransporte getEscolhido() {
         return escolhido;
     }
 
-    public void setEscolhido(String escolhido) {
+    public void setEscolhido(EmpresaTransporte escolhido) {
         this.escolhido = escolhido;
+    }
+    
+    public String getNome() {
+        return escolhido.toString();
+    }
+    
+    abstract double getValorTransporte();
+}
+
+class TransporteDefault extends Transporte {
+    public TransporteDefault() {
+        setEscolhido(null);
+    }
+
+    @Override
+    double getValorTransporte() {
+        return Double.MAX_VALUE;
+    }
+}
+
+class TransporteBolt extends Transporte {
+    public TransporteBolt() {
+        setEscolhido(EmpresaTransporte.BOLT);
+    }
+
+    @Override
+    double getValorTransporte() {
+        return ThreadLocalRandom.current().nextDouble(0, 1 + 1);
+    }
+}
+class TransporteCabify extends Transporte {
+    public TransporteCabify() {
+        setEscolhido(EmpresaTransporte.CABIFY);
+    }
+
+    @Override
+    double getValorTransporte() {
+        return ThreadLocalRandom.current().nextDouble(0, 1 + 1);
+    }
+}
+class TransporteKapten extends Transporte {
+    public TransporteKapten() {
+        setEscolhido(EmpresaTransporte.KAPTEN);
+    }
+
+    @Override
+    double getValorTransporte() {
+        return ThreadLocalRandom.current().nextDouble(0, 1 + 1);
+    }
+}
+class TransporteUber extends Transporte {
+    public TransporteUber() {
+        setEscolhido(EmpresaTransporte.UBER);
+    }
+
+    @Override
+    double getValorTransporte() {
+        return ThreadLocalRandom.current().nextDouble(0, 1 + 1);
+    }
+}
+
+enum EmpresaTransporte {
+    UBER("Uber"),
+    BOLT("Bolt"),
+    KAPTEN("Kapten"),
+    CABIFY("Cabify");
+
+    private String nomeEmpresa;
+
+    EmpresaTransporte(String nomeEmpresa) {
+        this.nomeEmpresa = nomeEmpresa;
+    }
+
+    @Override
+    public String toString() {
+        return nomeEmpresa;
     }
 }
