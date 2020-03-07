@@ -55,6 +55,11 @@ class KillThread implements Runnable {
         return stopped.get();
     }
 
+    public void stop() {
+        stopped = true;
+        running = false;
+    }
+
     public void run() {
         System.out.println("running");
         running.set(true);

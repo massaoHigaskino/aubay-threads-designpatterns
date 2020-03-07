@@ -5,11 +5,11 @@ package threads.join;
 */
 
 public class ExemploWaitNotify {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         Somador somador = new Somador();
         somador.start();
-
+        somador.join();
         synchronized (somador) {
             System.out.println("Aguardando o b completar...");
             try {

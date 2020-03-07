@@ -60,8 +60,18 @@ class ThreadTarefa extends Thread {
 
 class Tarefa implements Runnable {
 
+    private Thread pre;
+
     @Override
     public void run() {
+
+        if (pre != null) {
+            try {
+                pre.join();
+            } catch (InterruptedException ex) {
+                System.out.println("Ocorreu um erro na pre.");
+            }
+        }
         System.out.println(Thread.currentThread().getName() + " Iniciada");
 
         System.out.println(Thread.currentThread().getName() + " Finalizada");
