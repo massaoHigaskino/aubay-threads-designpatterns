@@ -6,14 +6,15 @@ package com.exemplos.builder.alfabeto;
 
 public class ExemploAlfabeto {
     public static void main(String[] args) {
-        String alf = "a";
-        alf += "b";
-        alf += "c";
-        alf += "d";
-        alf += "e";
-        alf += "f";
-        alf += "g";
+        StringBuffer sb = new StringBuffer();
+        sb.append("a")
+                .append("b")
+                .append("c")
+                .append("d")
+                .append("e")
+                .append("f")
+                .append("g");
 
-        System.out.println(alf);
+        System.out.println(sb.toString());
     }
 }
