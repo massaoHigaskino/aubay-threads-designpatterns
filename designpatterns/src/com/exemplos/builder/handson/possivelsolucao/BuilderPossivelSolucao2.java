@@ -8,11 +8,11 @@ import java.time.LocalDateTime;
 public class BuilderPossivelSolucao2 {
 
     public static void main(String[] args) {
-//        Transacao2 transacao2 = Transacao2.builder()
-//                .dataTransacao(LocalDateTime.now())
-//                .estabelecimento("Vendinha da Tia")
-//                .localCompra("Saldanha")
-//                .build();
+        Transacao2 transacao2 = Transacao2.builder()
+                .dataTransacao(LocalDateTime.now())
+                .estabelecimento("Vendinha da Tia")
+                .localCompra("Saldanha")
+                .build();
     }
 
 }
