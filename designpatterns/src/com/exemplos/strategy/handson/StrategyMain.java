@@ -1,5 +1,9 @@
 package com.exemplos.strategy.handson;
 
+/**
+ * Porta de entrada dos padrões
+ *
+ */
 public class StrategyMain {
 
     public static void main(String[] args) {

@@ -1,6 +1,8 @@
 package com.exemplos.strategy.exemplos.conversao;
 
 import java.math.BigDecimal;
+import java.util.EnumMap;
+import java.util.Map;
 
 /*
     Objetivo: A conversão precisa de refatoração para um Strategy.
@@ -8,37 +10,57 @@ import java.math.BigDecimal;
 
 public class ConversorMoeda {
 
+    public static final Map<Moeda, ConversorMoedaI> CONVERSOR_MOEDA_MAP;
+
+    static {
+        CONVERSOR_MOEDA_MAP = new EnumMap<>(Moeda.class);
+        CONVERSOR_MOEDA_MAP.put(Moeda.EURO, new ConversorParaEuroImpl());
+        CONVERSOR_MOEDA_MAP.put(Moeda.REAL, new ConversorParaRealImpl());
+        CONVERSOR_MOEDA_MAP.put(Moeda.LIBRA, new ConversorParaLibraImpl());
+        CONVERSOR_MOEDA_MAP.put(Moeda.DOLAR, new ConversorParaDolarImpl());
+
+    }
+
     public static void main(String[] args) {
         Moeda euro = Moeda.EURO;
 
-        if (Moeda.EURO.equals(euro)) {
-            System.out.println("Convertido ficou " + new ConversorMoeda().converterParaEuro(BigDecimal.TEN));
-        } else if (Moeda.DOLAR.equals(euro)) {
-            System.out.println("Convertido ficou " + new ConversorMoeda().converterParaDolar(BigDecimal.TEN));
-        } else if (Moeda.LIBRA.equals(euro)) {
-            System.out.println("Convertido ficou " + new ConversorMoeda().converterParaLibra(BigDecimal.TEN));
-        } else if (Moeda.REAL.equals(euro)) {
-            System.out.println("Convertido ficou " + new ConversorMoeda().converterParaReal(BigDecimal.TEN));
-        }
-    }
-
-    public BigDecimal converterParaEuro(BigDecimal valor) {
-        return valor.divide(BigDecimal.valueOf(0.2));
-    }
-
-    public BigDecimal converterParaReal(BigDecimal valor) {
-        return valor.divide(BigDecimal.valueOf(0.1));
-    }
-
-    public BigDecimal converterParaLibra(BigDecimal valor) {
-        return valor.divide(BigDecimal.valueOf(0.3));
-    }
-
-    public BigDecimal converterParaDolar(BigDecimal valor) {
-        return valor.divide(BigDecimal.valueOf(0.4));
+        System.out.println("Convertido ficou " + CONVERSOR_MOEDA_MAP.get(euro).converter(BigDecimal.TEN));
     }
 }
 
 enum Moeda {
     EURO, REAL, LIBRA, DOLAR
+}
+
+interface ConversorMoedaI {
+    BigDecimal converter(BigDecimal valor);
+}
+
+
+class ConversorParaEuroImpl implements ConversorMoedaI {
+    @Override
+    public BigDecimal converter(BigDecimal valor) {
+        return valor.divide(BigDecimal.valueOf(0.2));
+    }
+}
+
+class ConversorParaRealImpl implements ConversorMoedaI {
+    @Override
+    public BigDecimal converter(BigDecimal valor) {
+        return valor.divide(BigDecimal.valueOf(0.1));
+    }
+}
+
+class ConversorParaLibraImpl implements ConversorMoedaI {
+    @Override
+    public BigDecimal converter(BigDecimal valor) {
+        return valor.divide(BigDecimal.valueOf(0.3));
+    }
+}
+
+class ConversorParaDolarImpl implements ConversorMoedaI {
+    @Override
+    public BigDecimal converter(BigDecimal valor) {
+        return valor.divide(BigDecimal.valueOf(0.4));
+    }
 }

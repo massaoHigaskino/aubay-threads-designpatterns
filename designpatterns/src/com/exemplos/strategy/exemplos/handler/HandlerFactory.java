@@ -7,20 +7,28 @@ package com.exemplos.strategy.exemplos.handler;
     Infelizmente, não é possível generalizar os Documents.
  */
 
+import java.lang.reflect.InvocationTargetException;
+import java.util.HashMap;
+import java.util.Map;
+
 public class HandlerFactory {
+    
+    public static final Map<String, Class<? extends AbstractHandler>> HANDLER_MAPPER;
+    
+    static {
+        HANDLER_MAPPER = new HashMap<>(4);
+        HANDLER_MAPPER.put("LoginRequest1Document", HandlerLogin.class);
+        HANDLER_MAPPER.put("LogoutRequest1Document", HandlerLogout.class);
+        HANDLER_MAPPER.put("CreateUserRequest1Document", HandlerCreateUser.class);
+        HANDLER_MAPPER.put("RemoveUserRequest1Document", HandlerRemoveUser.class);
+    }
 
     public Object getHandler(String nameDocument) {
-        switch (nameDocument) {
-            case "LoginRequest1Document":
-                return new HandlerLogin();
-            case "LogoutRequest1Document":
-                return new HandlerLogout();
-            case "CreateUserRequest1Document":
-                return new HandlerCreateUser();
-            case "RemoveUserRequest1Document":
-                return new HandlerRemoveUser();
-            default:
-                return null;
+        try {
+            return HANDLER_MAPPER.getOrDefault(nameDocument, HandlerDummy.class).getDeclaredConstructor().newInstance();
+        } catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
+            e.printStackTrace();
+            return null;
         }
     }
 
@@ -47,25 +55,40 @@ final class RemoveUserRequest1Document {
     private String idUser;
 }
 
-class HandlerLogin {
+abstract class AbstractHandler {
+    abstract String executar();
+}
+
+class HandlerDummy extends AbstractHandler {
+    @Override
+    String executar() {
+        return null;
+    }
+}
+
+class HandlerLogin extends AbstractHandler {
+    @Override
     public String executar() {
         return "HandlerLogin";
     }
 }
 
-class HandlerLogout {
+class HandlerLogout extends AbstractHandler {
+    @Override
     public String executar() {
         return "HandlerLogout";
     }
 }
 
-class HandlerCreateUser {
+class HandlerCreateUser extends AbstractHandler {
+    @Override
     public String executar() {
         return "HandlerCreateUser";
     }
 }
 
-class HandlerRemoveUser {
+class HandlerRemoveUser extends AbstractHandler {
+    @Override
     public String executar() {
         return "HandlerRemoveUser";
     }
