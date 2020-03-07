@@ -9,6 +9,13 @@ import java.io.IOException;
 public class ExemploJavaRunnable {
 
     public static void main(String[] args) throws IOException {
+        Runnable runnable = new Runnable(){
+        
+            @Override
+            public void run() {
+                System.out.println("Teste");
+            }
+        };
         
     }
 

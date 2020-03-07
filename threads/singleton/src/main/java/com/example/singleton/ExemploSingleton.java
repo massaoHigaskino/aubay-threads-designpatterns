@@ -19,9 +19,9 @@ public class ExemploSingleton {
     }
 
 
-    private AtomicInteger total = new AtomicInteger(0);
     
-	public  void teste() {
+	public void teste() {
+        AtomicInteger total = new AtomicInteger(0);
 	    for (int i = 0; i < 1000; i++) {
             total.set(total.get()+i);
         }

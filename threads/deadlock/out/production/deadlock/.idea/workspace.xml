@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="09f2d4d8-062a-40bb-923d-93f427e5fe33" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/ExemploDesenharPintar.java" beforeDir="false" afterPath="$PROJECT_DIR$/threads/deadlock/ExemploDesenharPintar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../errors/ExampleErrorsSendMail.java" beforeDir="false" afterPath="$PROJECT_DIR$/../errors/threads/errors/ExampleErrorsSendMail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../join/ExemploWaitNotify.java" beforeDir="false" afterPath="$PROJECT_DIR$/../join/ExemploWaitNotify.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../join/HandsOnJoin.java" beforeDir="false" afterPath="$PROJECT_DIR$/../join/HandsOnJoin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../join/OrganizadorThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../join/OrganizadorThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../priority/ExemploPrioridade.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sync/ExemploImutabilidade.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sync/threads/sync/ExemploImutabilidade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sync/ExemploSimpleDateFormat.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sync/threads/sync/ExemploSimpleDateFormat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sync/ExemploSimpleDateFormatJava8.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sync/threads/sync/ExemploSimpleDateFormatJava8.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sync/ExemploSomaProblematica.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sync/threads/sync/ExemploSomaProblematica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sync/ExemploSync1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sync/threads/sync/ExemploSync1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sync/HandsOnSync.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sync/HandsOnSync.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../threadsandrunnable/ExemploJavaLambda.java" beforeDir="false" afterPath="$PROJECT_DIR$/../threadsandrunnable/ExemploJavaLambda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../threadsandrunnable/ExemploJavaRun.java" beforeDir="false" afterPath="$PROJECT_DIR$/../threadsandrunnable/ExemploJavaRun.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../threadsandrunnable/ExemploJavaRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../threadsandrunnable/ExemploJavaRunnable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../threadsandrunnable/ExemploJavaStop.java" beforeDir="false" afterPath="$PROJECT_DIR$/../threadsandrunnable/ExemploJavaStop.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1YUNzQpqZIJKYj66PRBqv4gbQnG" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RunManager">
+    <configuration name="ExemploDesenharPintar" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="threads.deadlock.ExemploDesenharPintar" />
+      <module name="deadlock" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="threads.deadlock.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ExemploDesenharPintar" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="09f2d4d8-062a-40bb-923d-93f427e5fe33" name="Default Changelist" comment="" />
+      <created>1582993474795</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582993474795</updated>
+      <workItem from="1582993475944" duration="134000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

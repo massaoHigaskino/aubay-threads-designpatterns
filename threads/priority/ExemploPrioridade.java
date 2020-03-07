@@ -17,6 +17,12 @@ public class ExemploPrioridade {
         Thread tCrianca = new Thread(crianca);
         Thread tVoce = new Thread(voce);
 
+        tGestante.setPriority(9);
+        tIdoso.setPriority(10);
+        tCrianca.setPriority(8);
+        tVoce.setPriority(Thread.MIN_PRIORITY);
+
+
         tGestante.start();
         tIdoso.start();
         tCrianca.start();

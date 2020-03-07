@@ -12,7 +12,7 @@ public class ExemploJavaRun {
 
         Thread t1 = new Thread(task);
         
-        t1.run();
+        t1.start();
 
     }
 
