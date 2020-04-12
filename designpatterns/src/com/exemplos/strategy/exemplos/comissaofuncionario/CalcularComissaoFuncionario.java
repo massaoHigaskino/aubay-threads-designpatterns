@@ -9,11 +9,9 @@ import java.math.BigDecimal;
 public class CalcularComissaoFuncionario {
     public static void main(String[] args) {
 
-        Empregado empregado = new Empregado();
-        empregado.setCargo("Gerente");
-        empregado.setNome("Dell da Microsoft");
+        Empregado empregado = new Empregado("João", new Gerente());
         Compra compra = new Compra(empregado, BigDecimal.TEN);
-        System.out.println("O valor da sua comissão é de: " +compra.calcularComissao());
+        System.out.println("O valor da sua comissão é de: " + compra.calcularComissao());
     }
 }
 
@@ -28,24 +26,43 @@ class Compra {
     }
 
     public BigDecimal calcularComissao() {
-        if(empregado.getCargo().equals("Gerente")) {
-            return totalCompra.multiply(BigDecimal.valueOf(0.3));
-        } else if(empregado.getCargo().equals("Desenvolvedor")) {
-            return totalCompra.multiply(BigDecimal.valueOf(0.9));
-        } else if(empregado.getCargo().equals("Jurídico")) {
-            return totalCompra.multiply(BigDecimal.valueOf(0.4));
-        } else if(empregado.getCargo().equals("ScrumMaster")) {
-            return totalCompra.multiply(BigDecimal.valueOf(0.1));
-        } else if(empregado.getCargo().equals("Tester")) {
-            return totalCompra.multiply(BigDecimal.valueOf(0.7));
-        }
-        return totalCompra.multiply(BigDecimal.valueOf(0.0));
+        return empregado.getCargo().calcularComissao(totalCompra);
     }
 }
 
+class Juridico implements Cargo {
+
+    @Override
+    public BigDecimal calcularComissao(BigDecimal totalCompra) {
+        return totalCompra.multiply(BigDecimal.valueOf(0.4));
+    }
+}
+
+class Gerente implements Cargo {
+
+    @Override
+    public BigDecimal calcularComissao(BigDecimal totalCompra) {
+        return totalCompra.multiply(BigDecimal.valueOf(0.3));
+    }
+}
+
+class Desenvolvedor implements Cargo {
+
+    @Override
+    public BigDecimal calcularComissao(BigDecimal totalCompra) {
+        return totalCompra.multiply(BigDecimal.valueOf(0.9));
+    }
+}
+
+
 class Empregado {
     private String nome;
-    private String cargo;
+    private Cargo cargo;
+
+    public Empregado(String nome, Cargo cargo) {
+        this.nome = nome;
+        this.cargo = cargo;
+    }
 
     public String getNome() {
         return nome;
@@ -55,11 +72,11 @@ class Empregado {
         this.nome = nome;
     }
 
-    public String getCargo() {
+    public Cargo getCargo() {
         return cargo;
     }
 
-    public void setCargo(String cargo) {
+    public void setCargo(Cargo cargo) {
         this.cargo = cargo;
     }
 }

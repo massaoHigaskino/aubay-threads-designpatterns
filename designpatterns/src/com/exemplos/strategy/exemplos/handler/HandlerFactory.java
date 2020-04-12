@@ -7,26 +7,51 @@ package com.exemplos.strategy.exemplos.handler;
     Infelizmente, não é possível generalizar os Documents.
  */
 
+import java.lang.reflect.InvocationTargetException;
+
 public class HandlerFactory {
 
     public Object getHandler(String nameDocument) {
-        switch (nameDocument) {
-            case "LoginRequest1Document":
-                return new HandlerLogin();
-            case "LogoutRequest1Document":
-                return new HandlerLogout();
-            case "CreateUserRequest1Document":
-                return new HandlerCreateUser();
-            case "RemoveUserRequest1Document":
-                return new HandlerRemoveUser();
-            default:
-                return null;
+        try {
+            return EnumHandler.getHandler(nameDocument);
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
         }
+        return null;
     }
 
     public static void main(String[] args) {
         HandlerLogin hl = (HandlerLogin) new HandlerFactory().getHandler("LoginRequest1Document");
         System.out.println(hl.executar());
+    }
+
+}
+
+enum EnumHandler {
+    LOGINHANDLER("LoginRequest1Document", HandlerLogin.class);
+
+
+    private String document;
+    private Class<? extends BaseHandler> handler;
+
+    EnumHandler(String document, Class<? extends BaseHandler> handler) {
+        this.document = document;
+        this.handler = handler;
+    }
+
+    public static BaseHandler getHandler(String document) throws IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException {
+        for (EnumHandler enumHandler : EnumHandler.values()) {
+            if (enumHandler.document.equals(document)) {
+                return enumHandler.handler.getDeclaredConstructor().newInstance();
+            }
+        }
+        return null;
     }
 
 }
@@ -47,25 +72,29 @@ final class RemoveUserRequest1Document {
     private String idUser;
 }
 
-class HandlerLogin {
+class BaseHandler {
+
+}
+
+class HandlerLogin extends BaseHandler {
     public String executar() {
         return "HandlerLogin";
     }
 }
 
-class HandlerLogout {
+class HandlerLogout extends BaseHandler {
     public String executar() {
         return "HandlerLogout";
     }
 }
 
-class HandlerCreateUser {
+class HandlerCreateUser extends BaseHandler {
     public String executar() {
         return "HandlerCreateUser";
     }
 }
 
-class HandlerRemoveUser {
+class HandlerRemoveUser extends BaseHandler {
     public String executar() {
         return "HandlerRemoveUser";
     }

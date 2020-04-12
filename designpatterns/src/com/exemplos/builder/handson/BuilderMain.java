@@ -6,6 +6,13 @@ import java.time.LocalDateTime;
 public class BuilderMain {
     public static void main(String[] args) {
         Transacao transacao = new Transacao("CARTAO", "12345", "Saldanha", "Vendinha da Tia", LocalDateTime.now(), BigDecimal.TEN);
+        Transacao t2 = new Transacao
+                .Builder()
+                .comLocalCompra("Saldanha")
+                .comMetodoPagamento("Cartao")
+                .comNumeroCartao("12312323")
+                .build();
+        System.out.println(t2);
     }
 }
 
@@ -25,6 +32,10 @@ class Transacao {
         this.estabelecimento = estabelecimento;
         this.dataTransacao = dataTransacao;
         this.valor = valor;
+    }
+
+    public Transacao() {
+
     }
 
     public String getMetodoPagamento() {
@@ -74,4 +85,41 @@ class Transacao {
     public void setValor(BigDecimal valor) {
         this.valor = valor;
     }
+
+    public static class Builder {
+
+        private String metodoPagamento;
+        private String numeroCartao;
+        private String localCompra;
+        private String estabelecimento;
+        private LocalDateTime dataTransacao;
+        private BigDecimal valor;
+
+        public Builder comMetodoPagamento(String metodoPagamento) {
+            this.metodoPagamento = metodoPagamento;
+            return this;
+        }
+
+        public Builder comNumeroCartao(String numeroCartao) {
+            this.numeroCartao = numeroCartao;
+            return this;
+        }
+
+        public Builder comLocalCompra(String localCompra) {
+            this.localCompra = localCompra;
+            return this;
+        }
+
+        public Transacao build() {
+            Transacao transacao = new Transacao();
+            transacao.setMetodoPagamento(this.metodoPagamento);
+            transacao.setLocalCompra(this.localCompra);
+            transacao.setNumeroCartao(this.numeroCartao);
+            return transacao;
+        }
+
+    }
+
+
+
 }
