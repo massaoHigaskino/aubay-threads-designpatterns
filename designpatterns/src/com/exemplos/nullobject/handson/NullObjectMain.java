@@ -28,6 +28,8 @@ class Ftp implements Conexao {
     }
 }
 
+
+
 class FactoryConexao {
     public static Conexao getConexao(String tipo) {
         if (tipo.equals("http")) {
@@ -35,7 +37,15 @@ class FactoryConexao {
         } else if (tipo.equals("ftp")) {
             return new Ftp();
         } else {
-            return null;
+            return new NullObject();
         }
+    }
+}
+
+class NullObject implements Conexao {
+
+    @Override
+    public void conectar(String parametros) {
+        System.out.println("NullObject");
     }
 }

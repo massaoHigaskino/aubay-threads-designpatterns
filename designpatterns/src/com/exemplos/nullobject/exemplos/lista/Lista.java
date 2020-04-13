@@ -21,7 +21,7 @@ class FabricaLista {
         } else if(tipo.equals("stack")) {
             return new Stack<>();
         } else {
-            return null;
+            return new ArrayList<>();
         }
     }
  }

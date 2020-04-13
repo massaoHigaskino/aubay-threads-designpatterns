@@ -13,7 +13,8 @@ public class ExemploAlfabeto {
         alf += "e";
         alf += "f";
         alf += "g";
-
-        System.out.println(alf);
+        StringBuffer sb = new StringBuffer();
+        sb.append("a").append("b").append("c");
+        System.out.println(sb);
     }
 }

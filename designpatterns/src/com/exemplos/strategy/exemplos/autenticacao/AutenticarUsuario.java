@@ -8,27 +8,66 @@ public class AutenticarUsuario {
 
     public static void main(String[] args) {
         AutenticarUsuario autenticar = new AutenticarUsuario();
-
-        String autenticacao = "digest";
-
-        if (autenticacao.equals("basic")) {
-            // autenticação basic
-        } else if (autenticacao.equals("basic")) {
-            // autenticação basic
-        } else if (autenticacao.equals("ldap")) {
-            // autenticação ldap
-        } else if (autenticacao.equals("oauth")) {
-            // autenticação oauth
-        } else if (autenticacao.equals("kerberos")) {
-            // autenticação kerberos
-        }
-
-        autenticar.autenticar("meuemail@gmail.com", "12334");
+        AutenticaUsuario basic = new Basic("meuemail@gmail.com", "12334");
+        autenticar.autenticar(basic);
 
     }
 
-    public void autenticar(String username, String password) {
+    public void autenticar(AutenticaUsuario autenticacao) {
+        autenticacao.autentica();
         System.out.println("Autenticação realizada");
     }
 
+}
+
+interface AutenticaUsuario {
+    void autentica();
+}
+
+class Basic implements AutenticaUsuario {
+
+    private String username;
+    private String password;
+
+    public Basic(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
+    @Override
+    public void autentica() {
+        System.out.println("Autenticando com Basic");
+    }
+}
+
+class Kerberos implements AutenticaUsuario {
+
+    private String username;
+    private String password;
+
+    public Kerberos(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
+    @Override
+    public void autentica() {
+        System.out.println("Autenticando Usuario com Kerberos");
+    }
+}
+
+class LDAP implements AutenticaUsuario {
+
+    private String username;
+    private String password;
+
+    public LDAP(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
+    @Override
+    public void autentica() {
+        System.out.println("Autenticando Usuário com LDAP");
+    }
 }

@@ -9,44 +9,43 @@ public class CompressaoArquivos {
 
     public static void main(String[] args) {
         CompressaoArquivos ca = new CompressaoArquivos();
-        System.out.println(ca.comprimir(Formatos.BASE64).get());
+        Compressao rar = new Rar();
+        System.out.println(ca.comprimir(rar).get());
 
     }
 
-    public Optional<String> comprimir(Formatos formato) {
-        if (formato.equals(Formatos.ZIP)) {
-            return Optional.of("Comprimir ZIP");
-        }
-        if (formato.equals(Formatos.RAR)) {
-            return Optional.of("Comprimir RAR");
-        }
-        if (formato.equals(Formatos.SEVENZIP)) {
-            return Optional.of("Comprimir SEVENZIP");
-        }
-        if (formato.equals(Formatos.ISO)) {
-            return Optional.of("Comprimir ISO");
-        }
-        if (formato.equals(Formatos.BZ2)) {
-            return Optional.of("Comprimir BZ2");
-        }
-        if (formato.equals(Formatos.GZ)) {
-            return Optional.of("Comprimir GZ");
-        }
-        if (formato.equals(Formatos.GZIP)) {
-            return Optional.of("Comprimir GZIP");
-        }
-        if (formato.equals(Formatos.TARGZ)) {
-            return Optional.of("Comprimir ZIP");
-        }
-        if (formato.equals(Formatos.TAR)) {
-            return Optional.of("Comprimir ZIP");
-        }
-        if (formato.equals(Formatos.BASE64)) {
-            return Optional.of("Comprimir ZIP");
-        }
-        return Optional.empty();
+    public Optional<String> comprimir(Compressao formato) {
+        return formato.comprimir();
     }
 
+}
+
+class Zip implements Compressao {
+
+    @Override
+    public Optional<String> comprimir() {
+        return Optional.of("Comprimir ZIP");
+    }
+}
+
+class Rar implements Compressao {
+
+    @Override
+    public Optional<String> comprimir() {
+        return Optional.of("Comprimir RAR");
+    }
+}
+
+class Gzip implements Compressao {
+
+    @Override
+    public Optional<String> comprimir() {
+        return Optional.of("Comprimir GZIP");
+    }
+}
+
+interface Compressao {
+    Optional<String> comprimir();
 }
 
 enum Formatos {
