@@ -10,6 +10,7 @@ public class Pagamento {
 }
 
 class RealizarPagamento {
+
     public void verificarEstque() {
         System.out.println("Verificando estoque");
     }
@@ -20,5 +21,13 @@ class RealizarPagamento {
 
     public void verificarEntrega() {
         System.out.println("Verificando entrega");
+    }
+
+    public void verificarPagamento() {
+        System.out.println("Verificando pagamento");
+    }
+
+    public void verificarGeracaoNotaFiscal() {
+        System.out.println("Verificando nota fiscal");
     }
 }
