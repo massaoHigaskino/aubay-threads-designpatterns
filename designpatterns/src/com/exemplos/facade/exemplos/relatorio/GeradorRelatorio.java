@@ -1,7 +1,7 @@
 package com.exemplos.facade.exemplos.relatorio;
 
 /*
-    Objetivo: utilize o patter facade para refatorar a classe
+    Objetivo: utilize o pattern facade para refatorar a classe
  */
 public class GeradorRelatorio {
     public static void main(String[] args) {
@@ -20,5 +20,9 @@ class Relatorio {
 
     public void gerarDetail() {
         System.out.println("Gerando o detail");
+    }
+
+    public void gerarPaginacao() {
+        System.out.println("Gerando a paginacao");
     }
 }
