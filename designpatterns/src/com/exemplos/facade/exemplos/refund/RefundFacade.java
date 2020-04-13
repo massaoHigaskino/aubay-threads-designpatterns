@@ -6,13 +6,41 @@ package com.exemplos.facade.exemplos.refund;
 public class RefundFacade {
 
     public static void main(String[] args) {
-
+        Refund refund = new Refund();
+        refund.doRefund();
     }
 
 }
 
 class Refund {
 
+    public void doRefund() {
+        InicioDevolucao inicioDevolucao = new InicioDevolucao();
+        inicioDevolucao.registrarInicioRefund();
+
+        Log log = new Log();
+        log.registrarLog();
+
+        Credenciais credenciais = new Credenciais();
+        if(credenciais.validarCredenciais()) {
+            Utilizador utilizador = new Utilizador();
+            utilizador.obtendoUtilizador();
+
+            TerminalDevolucao terminalDevolucao = new TerminalDevolucao();
+            terminalDevolucao.obtendoTerminalDevolucao();
+
+            Transacao transacao = new Transacao();
+            transacao.obtendoTransacao();
+
+            Devolucao devolucao = new Devolucao();
+            devolucao.realizarDevolucao();
+        }
+
+        FimDevolucao fimDevolucao = new FimDevolucao();
+        fimDevolucao.registrarFimRefund();
+
+        log.registrarLog();
+    }
 
 }
 

@@ -5,24 +5,32 @@ package com.exemplos.facade.exemplos.relatorio;
  */
 public class GeradorRelatorio {
     public static void main(String[] args) {
-
+        Relatorio relatorio = new Relatorio();
+        relatorio.gerarRelatorio();
     }
 }
 
 class Relatorio {
-    public void gerarHeader() {
+    private void gerarHeader() {
         System.out.println("Gerando o header");
     }
 
-    public void gerarFooter() {
+    private void gerarFooter() {
         System.out.println("Gerando o footer");
     }
 
-    public void gerarDetail() {
+    private void gerarDetail() {
         System.out.println("Gerando o detail");
     }
 
-    public void gerarPaginacao() {
+    private void gerarPaginacao() {
         System.out.println("Gerando a paginacao");
+    }
+
+    public void gerarRelatorio() {
+        gerarHeader();
+        gerarFooter();
+        gerarDetail();
+        gerarPaginacao();
     }
 }

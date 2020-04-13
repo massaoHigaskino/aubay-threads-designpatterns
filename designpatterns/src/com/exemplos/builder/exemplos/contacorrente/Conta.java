@@ -1,6 +1,6 @@
 package com.exemplos.builder.exemplos.contacorrente;
 
-import lombok.Builder;
+//import lombok.Builder;
 
 import java.math.BigDecimal;
 
@@ -8,7 +8,7 @@ import java.math.BigDecimal;
     Objetivo: Aplique o pattern Builder e melhore a construção do objeto
  */
 
-@Builder
+//@Builder
 public class Conta {
 
     private String numeroConta;
