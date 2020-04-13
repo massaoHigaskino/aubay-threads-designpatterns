@@ -5,54 +5,56 @@ package com.exemplos.templatemethod.exemplos.requisicao;
  */
 public class BaseHandler {
     public static void main(String[] args) {
-        Negocio lh = new LoginHandler();
-        lh.executeBusiness();
+        ((AbstractHandler) new LoginHandler()).executeBusiness();
+        ((AbstractHandler) new LogoutHandler()).executeBusiness();
     }
+}
+
+abstract class AbstractHandler implements Negocio {
+    @Override
+    public void executeBusiness() {
+        validarNegocio();
+        validarAcesso();
+        validarRequisicao();
+    }
+
+    public abstract void validarRequisicao();
+
+    public abstract void validarAcesso();
+
+    public abstract void validarNegocio();
 }
 
 interface Negocio {
     void executeBusiness();
 }
 
-class LoginHandler implements Negocio {
-
+class LoginHandler extends AbstractHandler {
     @Override
-    public void executeBusiness() {
-        validarLogin();
-        validarAcesso();
-        validarRequisicao();
-    }
-
-    private void validarRequisicao() {
+    public void validarRequisicao() {
         System.out.println("Validar Requisição");
     }
-
-    private void validarAcesso() {
+@Override
+    public void validarAcesso() {
         System.out.println("Validar Acesso");
     }
-
-    private void validarLogin() {
+    @Override
+    public void validarNegocio() {
         System.out.println("Validar login");
     }
 }
 
-class LogoutHandler implements Negocio {
+class LogoutHandler extends AbstractHandler {
     @Override
-    public void executeBusiness() {
-        validarLogin();
-        validarAcesso();
-        validarRequisicao();
-    }
-
-    private void validarRequisicao() {
+    public void validarRequisicao() {
         System.out.println("Validar Requisição");
     }
-
-    private void validarAcesso() {
+    @Override
+    public void validarAcesso() {
         System.out.println("Validar Acesso");
     }
-
-    private void validarLogin() {
-        System.out.println("Validar login");
+    @Override
+    public void validarNegocio() {
+        System.out.println("Validar logout");
     }
 }
