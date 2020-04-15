@@ -14,6 +14,9 @@ interface Negocio {
     void executeBusiness();
 }
 
+abstract  class Handler  {
+}
+
 class LoginHandler implements Negocio {
 
     @Override

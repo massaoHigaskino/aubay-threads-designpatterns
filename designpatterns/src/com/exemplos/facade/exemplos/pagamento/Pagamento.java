@@ -5,29 +5,38 @@ package com.exemplos.facade.exemplos.pagamento;
  */
 public class Pagamento {
     public static void main(String[] args) {
-
+        RealizarPagamento rp = new RealizarPagamento();
+        rp.realizar();
     }
 }
 
 class RealizarPagamento {
 
-    public void verificarEstque() {
+    private void verificarEstque() {
         System.out.println("Verificando estoque");
     }
 
-    public void verificarCartao() {
+    private void verificarCartao() {
         System.out.println("Verificando cartão");
     }
 
-    public void verificarEntrega() {
+    private void verificarEntrega() {
         System.out.println("Verificando entrega");
     }
 
-    public void verificarPagamento() {
+    private void verificarPagamento() {
         System.out.println("Verificando pagamento");
     }
 
-    public void verificarGeracaoNotaFiscal() {
+    private void verificarGeracaoNotaFiscal() {
         System.out.println("Verificando nota fiscal");
+    }
+
+    public void realizar() {
+        verificarEstque();
+        verificarCartao();
+        verificarPagamento();
+        verificarGeracaoNotaFiscal();
+        verificarEntrega();
     }
 }
