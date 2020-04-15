@@ -19,7 +19,7 @@ public class Moeda {
     }
 
     public static void main(String[] args) {
-        System.out.println(build(Real.class.getName()).map(conversao -> conversao.converter(BigDecimal.TEN)).orElse(null));
+        System.out.println(build("JAVA").map(conversao -> conversao.converter(BigDecimal.TEN)).orElse(null));
     }
 
     public static Optional<Conversao> build(String key) {

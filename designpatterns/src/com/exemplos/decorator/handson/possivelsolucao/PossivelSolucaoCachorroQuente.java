@@ -1,5 +1,5 @@
 package com.exemplos.decorator.handson.possivelsolucao;
-
+// Também conhecido como Wrapper
 public class PossivelSolucaoCachorroQuente {
     public static void main(String[] args) {
         CachorroQuente basico = new CachorroQuenteBasico();
