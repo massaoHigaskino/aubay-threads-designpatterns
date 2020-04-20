@@ -1,5 +1,7 @@
 package com.designsall.alldesigntogether.controller;
 
+import com.designsall.alldesigntogether.controller.template.GetEstabelecimentoHandler;
+import com.designsall.alldesigntogether.controller.template.ListEstabelecimentoHandler;
 import com.designsall.alldesigntogether.dto.EstabelecimentoDTO;
 import com.designsall.alldesigntogether.dto.ProdutoDTO;
 import com.designsall.alldesigntogether.entity.Estabelecimento;
@@ -17,17 +19,17 @@ import java.util.List;
 public class EstabelecimentoHandler {
 
     @Autowired
-    private EstabelecimentoRepository estabelecimentoRepository;
+    private GetEstabelecimentoHandler<EstabelecimentoDTO, Estabelecimento> getEstabelecimentoHandler;
+    @Autowired
+    private ListEstabelecimentoHandler<EstabelecimentoDTO, List<Estabelecimento>> listListEstabelecimentoHandler;
 
     @PostMapping("/estabelecimento/responsavel")
     public Estabelecimento getEstabelecimento(@RequestBody EstabelecimentoDTO estabelecimentoDTO) {
-        Estabelecimento estabelecimentos = estabelecimentoRepository.findByResponsavel(estabelecimentoDTO.getResponsavel());
-        return estabelecimentos;
+        return getEstabelecimentoHandler.runHandler(estabelecimentoDTO);
     }
 
     @GetMapping("/estabelecimentos")
     public List<Estabelecimento> getEstabelecimentos(@RequestBody EstabelecimentoDTO estabelecimentoDTO) {
-        List<Estabelecimento> estabelecimentos = estabelecimentoRepository.findAll();
-        return estabelecimentos;
+        return listListEstabelecimentoHandler.runHandler(estabelecimentoDTO);
     }
 }

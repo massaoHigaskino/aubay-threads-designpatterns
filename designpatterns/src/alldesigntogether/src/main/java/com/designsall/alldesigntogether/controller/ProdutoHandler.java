@@ -1,5 +1,7 @@
 package com.designsall.alldesigntogether.controller;
 
+import com.designsall.alldesigntogether.controller.template.GetProdutoHandler;
+import com.designsall.alldesigntogether.controller.template.ListProdutoHandler;
 import com.designsall.alldesigntogether.dto.ProdutoDTO;
 import com.designsall.alldesigntogether.entity.Produto;
 import com.designsall.alldesigntogether.repository.ProdutoRepository;
@@ -15,17 +17,17 @@ import java.util.List;
 public class ProdutoHandler {
 
     @Autowired
-    private ProdutoRepository produtoRepository;
+    private GetProdutoHandler<ProdutoDTO, List<Produto>> getProdutoHandler;
+    @Autowired
+    private ListProdutoHandler<ProdutoDTO, List<Produto>> listListProdutoHandler;
 
     @PostMapping("/produto/descricao")
     public List<Produto> getProduto(@RequestBody ProdutoDTO produtoDto) {
-        List<Produto> produtos = produtoRepository.findByDescricaoContains(produtoDto.getDescricao());
-        return produtos;
+        return getProdutoHandler.runHandler(produtoDto);
     }
 
     @GetMapping("/produtos")
     public List<Produto> produtos(@RequestBody ProdutoDTO produtoDto) {
-        List<Produto> produtos = produtoRepository.findAll();
-        return produtos;
+        return listListProdutoHandler.runHandler(produtoDto);
     }
 }
