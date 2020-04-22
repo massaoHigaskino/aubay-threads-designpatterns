@@ -19,7 +19,7 @@ public class InformacoesSistema {
                 .build();
     }
 
-    public InformacoesDTO status() {
+    public static InformacoesDTO status() {
         return dto;
     }
 

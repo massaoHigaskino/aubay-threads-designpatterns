@@ -9,6 +9,6 @@ public class StatusHandler {
 
     @GetMapping("/status")
     public InformacoesDTO status() {
-        return new InformacoesSistema().status();
+        return InformacoesSistema.status();
     }
 }
