@@ -19,9 +19,9 @@ import java.util.List;
 public class EstabelecimentoHandler {
 
     @Autowired
-    private GetEstabelecimentoHandler<EstabelecimentoDTO, Estabelecimento> getEstabelecimentoHandler;
+    private GetEstabelecimentoHandler getEstabelecimentoHandler;
     @Autowired
-    private ListEstabelecimentoHandler<EstabelecimentoDTO, List<Estabelecimento>> listListEstabelecimentoHandler;
+    private ListEstabelecimentoHandler listListEstabelecimentoHandler;
 
     @PostMapping("/estabelecimento/responsavel")
     public Estabelecimento getEstabelecimento(@RequestBody EstabelecimentoDTO estabelecimentoDTO) {

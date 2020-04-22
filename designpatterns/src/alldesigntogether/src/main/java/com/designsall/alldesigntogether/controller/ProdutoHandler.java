@@ -17,9 +17,9 @@ import java.util.List;
 public class ProdutoHandler {
 
     @Autowired
-    private GetProdutoHandler<ProdutoDTO, List<Produto>> getProdutoHandler;
+    private GetProdutoHandler getProdutoHandler;
     @Autowired
-    private ListProdutoHandler<ProdutoDTO, List<Produto>> listListProdutoHandler;
+    private ListProdutoHandler listListProdutoHandler;
 
     @PostMapping("/produto/descricao")
     public List<Produto> getProduto(@RequestBody ProdutoDTO produtoDto) {

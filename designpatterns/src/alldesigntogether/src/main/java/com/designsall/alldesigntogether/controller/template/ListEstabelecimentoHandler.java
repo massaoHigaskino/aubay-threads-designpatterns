@@ -9,13 +9,13 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-public class ListEstabelecimentoHandler<InClazz extends EstabelecimentoDTO, OutClazz extends List<Estabelecimento>> extends BaseHandler<InClazz, OutClazz> {
+public class ListEstabelecimentoHandler extends BaseHandler<EstabelecimentoDTO, List<Estabelecimento>> {
 
     @Autowired
     private EstabelecimentoRepository estabelecimentoRepository;
 
     @Override
-    public OutClazz executeBusiness(InClazz dto) {
-        return (OutClazz) estabelecimentoRepository.findAll();
+    public List<Estabelecimento> executeBusiness(EstabelecimentoDTO dto) {
+        return estabelecimentoRepository.findAll();
     }
 }

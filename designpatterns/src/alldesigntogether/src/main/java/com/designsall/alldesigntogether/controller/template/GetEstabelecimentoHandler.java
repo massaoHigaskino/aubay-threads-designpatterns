@@ -7,13 +7,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class GetEstabelecimentoHandler<InClazz extends EstabelecimentoDTO, OutClazz extends Estabelecimento> extends BaseHandler<InClazz, OutClazz> {
+public class GetEstabelecimentoHandler extends BaseHandler<EstabelecimentoDTO, Estabelecimento> {
 
     @Autowired
     private EstabelecimentoRepository estabelecimentoRepository;
 
     @Override
-    public OutClazz executeBusiness(InClazz dto) {
-        return (OutClazz) estabelecimentoRepository.findByResponsavel(dto.getResponsavel());
+    public Estabelecimento executeBusiness(EstabelecimentoDTO dto) {
+        return estabelecimentoRepository.findByResponsavel(dto.getResponsavel());
     }
 }

@@ -9,13 +9,13 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-public class ListProdutoHandler<InClazz extends ProdutoDTO, OutClazz extends List<Produto>> extends BaseHandler<InClazz, OutClazz> {
+public class ListProdutoHandler extends BaseHandler<ProdutoDTO, List<Produto>> {
 
     @Autowired
     private ProdutoRepository produtoRepository;
 
     @Override
-    public OutClazz executeBusiness(InClazz dto) {
-        return (OutClazz) produtoRepository.findAll();
+    public List<Produto> executeBusiness(ProdutoDTO dto) {
+        return produtoRepository.findAll();
     }
 }
