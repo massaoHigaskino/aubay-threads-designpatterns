@@ -10,6 +10,7 @@ import java.io.IOException;
  */
 public class Arquivo {
     public static void main(String[] args) throws IOException {
-        //BufferedInputStream bis =
+        BufferedInputStream bis = new BufferedInputStream(new FileInputStream("FileName"));
+        bis.read(new byte[0]);
     }
 }

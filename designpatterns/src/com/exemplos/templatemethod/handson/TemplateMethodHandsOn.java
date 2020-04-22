@@ -16,7 +16,7 @@ class SocialNetwork {
     }
 
     private void logout(String username, String password) {
-        System.out.println("Fagenr Logoff");
+        System.out.println("Fagner Logoff");
     }
 
     private void post(String conteudo) {
