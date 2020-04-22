@@ -5,16 +5,18 @@ import com.designsall.alldesigntogether.dto.InformacoesDTO;
 public class InformacoesSistema {
 
     private static final InformacoesDTO dto;
+
     static {
-        dto = new InformacoesDTO();
-        dto.setFileEncoding(System.getProperty("file.encoding"));
-        dto.setJavaHome(System.getProperty("java.home"));
-        dto.setJavaRuntimeName(System.getProperty("java.runtime.name"));
-        dto.setJavaVendor(System.getProperty("java.vendor"));
-        dto.setJavaVersion(System.getProperty("java.version"));
-        dto.setOsArch(System.getProperty("os.arch"));
-        dto.setOsName(System.getProperty("os.name"));
-        dto.setOsVersion(System.getProperty("os.version"));
+        dto = InformacoesDTO.builder()
+                .fileEncoding(System.getProperty("file.encoding"))
+                .javaHome(System.getProperty("java.home"))
+                .javaRuntimeName(System.getProperty("java.runtime.name"))
+                .javaVendor(System.getProperty("java.vendor"))
+                .javaVersion(System.getProperty("java.version"))
+                .osArch(System.getProperty("os.arch"))
+                .osName(System.getProperty("os.name"))
+                .osVersion(System.getProperty("os.version"))
+                .build();
     }
 
     public InformacoesDTO status() {
