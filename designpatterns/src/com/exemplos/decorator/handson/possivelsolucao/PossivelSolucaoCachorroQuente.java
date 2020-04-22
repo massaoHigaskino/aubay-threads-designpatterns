@@ -2,11 +2,13 @@ package com.exemplos.decorator.handson.possivelsolucao;
 // Também conhecido como Wrapper
 public class PossivelSolucaoCachorroQuente {
     public static void main(String[] args) {
-        CachorroQuente basico = new CachorroQuenteBasico();
-        basico.montar();
+        /*
+            CachorroQuente basico = new CachorroQuenteBasico();
+            basico.montar();
 
-        CachorroQuente comTudo = new CachorroQuenteComTudo(new CachorroQuenteBasico());
-        comTudo.montar();
+            CachorroQuente comTudo = new CachorroQuenteComTudo(new CachorroQuenteBasico());
+            comTudo.montar();
+        */
 
         CachorroQuente gourmet = new CachorroQuenteGourmet(new CachorroQuenteComTudo(new CachorroQuenteBasico()));
         gourmet.montar();
