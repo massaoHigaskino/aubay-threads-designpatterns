@@ -10,6 +10,9 @@ public class ExemploLocalidade {
 
     public static void main(String[] args) {
         Locale locale = new Locale("en");
+
+        locale = new Locale.Builder().setLanguage("en").build();
+
     }
 
 }
